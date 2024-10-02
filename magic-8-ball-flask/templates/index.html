@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Magic 8 Ball</title>
+    </head>
+    <body>
+        <h1>Welcome to the Magic 8 Ball game!</h1>
+        <form method="post">
+            <label for="question">Ask me for any advice and I’ll help you out. Type in your question:</label><br><br>
+            <input type="text" id="question" name="question" placeholder="Type your question here"><br><br>
+            <input type="submit" value="Get Answer">
+        </form>
+        {% if question %}
+            <p>You asked: {{ question }}</p>
+            <p>Shaking... {{ answer }}</p>
+        {% endif %}
+    </body>
+</html>
